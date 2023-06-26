@@ -84,7 +84,7 @@ int main () {
     if (method == 1) goto LineMethod;
     if (method == 2) goto BulbMethod;
     if (method == 3) goto QuickMethod;
-    
+
     LineMethod:
     printf("Initial array : \n");
     time_t t1;
@@ -96,4 +96,47 @@ int main () {
         printf(" %i", M1[I]);
     }
     printf("\n");
+
+    printf("Line sorting method :\n");
+    int A=0;
+    int f1=0;
+    for (int I = 0; I < Count; I++) {
+        for (int J = I+1; J < Count; J++) {
+            A+=1;
+            if (sorting == 1) goto rising_L;
+            if (sorting == 2) goto falling_L;
+            rising_L:
+            if (M1[I] > M1[J]) {
+                int N=M1[I];
+	            M1[I]=M1[J];
+	            M1[J]=N;
+                for (int L = 0; L < Count; L++) {
+                    printf(" %i", M1[L]);
+                }
+                printf("    Iteration N %i\n ", A);
+                        
+            }
+            goto fin_L;
+            falling_L:
+            if (M1[I] < M1[J]) {
+                int N=M1[I];
+	            M1[I]=M1[J];
+	            M1[J]=N;
+                for (int L = 0; L < Count; L++) {
+                    printf(" %i", M1[L]);
+                }
+                printf("    Iteration N %i\n ", A);            
+            }
+            fin_L:
+            f1+=1;
+        }       
+    }
+    printf("\nSorted array : \n");
+    for (int I = 0; I < Count; I++) {
+        printf(" %i", M1[I]);
+    }
+    printf("\n");
+    printf("Count of iterations %i", A); 
+    printf("\n");
+    return 0;
 }
