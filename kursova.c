@@ -12,4 +12,6 @@ void QuickS (int Array[], /* масив для сортування */
 {
     int i = Left_B; 
     int j = Right_B;
+    
+    int middle = (Right_B+Left_B)/2;
 }
