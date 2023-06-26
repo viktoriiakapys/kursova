@@ -60,7 +60,7 @@ int main () {
     if (CE > 30) {
         printf("You enter greater then 30 elements, please input again.\n\n");
         goto Count_E;}
-        
+
     int method=0;
     int sorting=0;
     printf("What method do you want to see ?\n");
@@ -84,4 +84,16 @@ int main () {
     if (method == 1) goto LineMethod;
     if (method == 2) goto BulbMethod;
     if (method == 3) goto QuickMethod;
+    
+    LineMethod:
+    printf("Initial array : \n");
+    time_t t1;
+    srand ( (unsigned) time (&t1));
+    for (int I = 0; I < Count; I++) {
+        M1[I]=rand()%100 + 1;
+    }
+    for (int I = 0; I < Count; I++) {
+        printf(" %i", M1[I]);
+    }
+    printf("\n");
 }
