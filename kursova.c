@@ -60,4 +60,28 @@ int main () {
     if (CE > 30) {
         printf("You enter greater then 30 elements, please input again.\n\n");
         goto Count_E;}
+        
+    int method=0;
+    int sorting=0;
+    printf("What method do you want to see ?\n");
+    printf("1 - Line method\n");
+    printf("2 - Bulb method\n");
+    printf("3 - Quick sort method\n");
+    scanf("%d", &method);
+    printf("How do You want to sort array: 1 - rising, 2 - falling ?\n");
+    scanf("%d", &sorting);
+    printf("Method - %d",method);
+    printf(" sorting - %d\n",sorting);
+    int Count;
+    Count=CE;
+    int M1[Count];
+    int Count_B;
+    Count_B=CE;
+    int M2[Count_B];
+    int Count_Q;
+    Count_Q=CE;
+    int M3[Count_Q];
+    if (method == 1) goto LineMethod;
+    if (method == 2) goto BulbMethod;
+    if (method == 3) goto QuickMethod;
 }
