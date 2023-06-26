@@ -52,3 +52,12 @@ void QuickS (int Array[], /* масив для сортування */
     if (i<Right_B)
     { QuickS (Array, Count_Q, i, Right_B, sort);}
 }
+int main () {
+    int CE=0;
+    Count_E:
+    printf("Enter please count of elements (<=30) ");
+    scanf(" %d", &CE);
+    if (CE > 30) {
+        printf("You enter greater then 30 elements, please input again.\n\n");
+        goto Count_E;}
+}
