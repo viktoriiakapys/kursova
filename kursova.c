@@ -194,4 +194,23 @@ int main () {
     printf("Count of iterations %i", A1);
     printf("\n");
     return 0;
+
+    QuickMethod:
+    printf("\nQuick sorting method :\n");
+    printf("Initial array : \n");
+    time_t t3;
+    srand ( (unsigned) time (&t3));
+    for (int I = 0; I < Count_Q; I++) {
+        M3[I]=rand()%100 + 1;
+    }
+    for (int I = 0; I < Count_Q; I++) {
+        printf(" %i", M3[I]);
+    }
+    printf("\n");
+    QuickS(M3, Count_Q, 0, Count_Q-1, sorting);
+    printf("Sorted array : \n");
+    for (int I = 0; I < Count_Q; I++) {
+        printf(" %i", M3[I]);
+    }
+    printf("\n");
 }
