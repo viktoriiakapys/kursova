@@ -9,3 +9,7 @@ void QuickS (int Array[], /* масив для сортування */
 		int Left_B, /* ліва межа сортування */ 
 		int Right_B, /* права межа сортування */
         int sort) /* напрямок сортування */
+{
+    int i = Left_B; 
+    int j = Right_B;
+}
