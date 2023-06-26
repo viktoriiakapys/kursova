@@ -139,4 +139,59 @@ int main () {
     printf("Count of iterations %i", A); 
     printf("\n");
     return 0;
+
+    BulbMethod:
+    printf("Initial array :\n");
+    time_t t2;
+    srand ( (unsigned) time (&t2));
+    int K=0;
+    for (int I = 0; I < Count_B; I++) {
+        M2[I]=rand()%100 + 1;
+    }
+    for (int I = 0; I < Count_B; I++) {
+        printf(" %i", M2[I]);
+    }
+
+    printf("\nBulb sorting method :\n");
+    int A1=0;
+    int f=0;
+    for (int I = 0; I < Count_B; I++) {
+        for (int J = Count_B-1; J > I; J--) {
+            A1+=1;
+            if (sorting == 1) goto rising_B;
+            if (sorting == 2) goto falling_B;
+            rising_B:
+            if (M2[J-1] > M2[J]) {
+                K=M2[J-1];
+	            M2[J-1]=M2[J];
+	            M2[J]=K;
+                for (int L = 0; L < Count_B; L++) {
+                    printf(" %i", M2[L]);
+                }
+                printf("    Iteration N %i\n ", A1);
+                        
+            }
+            goto fin_B;
+            falling_B:
+            if (M2[J-1] < M2[J]) {
+                K=M2[J-1];
+	            M2[J-1]=M2[J];
+	            M2[J]=K;
+                for (int L = 0; L < Count_B; L++) {
+                    printf(" %i", M2[L]);
+                }
+                printf("    Iteration N %i\n ", A1);            
+            }
+            fin_B:
+            f+=1;
+        }       
+    }
+    printf("Sorted array :\n");
+    for (int I = 0; I < Count_B; I++) {
+        printf(" %i", M2[I]);
+    }
+    printf("\n");
+    printf("Count of iterations %i", A1);
+    printf("\n");
+    return 0;
 }
